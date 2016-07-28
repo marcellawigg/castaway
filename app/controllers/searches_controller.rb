@@ -5,6 +5,6 @@ class SearchesController < ApplicationController
 
   private
   def results(query)
-     SearchServices.new.search({q: query}).results
+     AudiosearchServices.new.search({q: query}).results
   end
 end

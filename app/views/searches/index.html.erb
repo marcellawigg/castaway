@@ -1,1 +1,5 @@
-<%= @results.first %>
+<h1><%= @results.count %> search results for "<%= params["query"] %>"</h1>
+<% @results.each do |result| %>
+  <p><%= result.title %><br>
+  <%= result.description %></p>
+<% end %>
