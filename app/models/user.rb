@@ -12,4 +12,8 @@ class User < ApplicationRecord
       new_user.location           = auth_info.extra.raw_info.location
     end
   end
+
+  def search
+    UserServices.new(self).search
+  end
 end
