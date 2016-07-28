@@ -1,6 +1,10 @@
 class SearchesController < ApplicationController
-
   def index
-    @results = UserServices.new(current_user).search("this")
+    @results = results(params["query"])
+  end
+
+  private
+  def results(query)
+     SearchServices.new.search({q: query}).results
   end
 end
