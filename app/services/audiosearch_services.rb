@@ -1,4 +1,4 @@
-class SearchServices
+class AudiosearchServices
   attr_reader :client
 
  def initialize
@@ -17,6 +17,10 @@ class SearchServices
 
   def search(query, type = "shows")
     client.search(query, type)
+  end
+
+  def trending
+    client.get_trending
   end
 
   def parse(response)
