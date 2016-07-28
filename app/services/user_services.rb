@@ -1,14 +1,22 @@
+require 'audiosearch'
 class UserServices
 
-  def initialize(user)
-    @_user = user
-    @_conn = Faraday.new("https://www.audiosear.ch/api")
+  attr_reader :client
+  def initialize(client = nil)
+    if client
+      @client = client
+    else
+    @client ||= Audiosearch::Client.new(
+        :id     => ENV['AS_API_KEY'].dup,
+        :secret => ENV['AS_SECRET'].dup,
+        :host   => ENV['AS_HOST'].dup,
+        :debug  => false
+      )
+    end
   end
 
-  def search(query)
-    @_conn.headers["Authorization"] = "Token #{@_user.oauth_token}"
-    response = @_conn.get("/search/shows/#{query.parameterize}")
-    parse(response)
+  def search(query, type = "shows")
+    client.search({ q: "#{query}" }, "#{type}")
   end
 
   def parse(response)

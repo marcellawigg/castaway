@@ -1,6 +1,6 @@
 class CreateResult < ActiveRecord::Migration[5.0]
   def change
-    create_table :results do |t|
+    create_table :shows do |t|
       t.string :title
       t.string :network
       t.string :categories
