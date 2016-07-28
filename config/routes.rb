@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: "homes#show"
+  get '/auth/twitter', as: :login
+
+  get "auth/twitter/callback", to: "sessions#create"
+  delete '/logout', as: :logout, to: 'sessions#destroy'
+  get '/shows/search', to: 'searches#index'
 end
