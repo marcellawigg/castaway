@@ -3,8 +3,20 @@ class SearchesController < ApplicationController
     @results = results(params["query"])
   end
 
+  def show
+    @result = result(params["id"])
+  end
+
   private
   def results(query)
      AudiosearchServices.new.search({q: query}).results
+  end
+
+  def result(id)
+    AudiosearchServices.new.get_show(id)
+  end
+
+  def host
+    AudiosearchServices.new.get_show(id)["hosts"]["name"]
   end
 end
