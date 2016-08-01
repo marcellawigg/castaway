@@ -6,6 +6,7 @@ class SearchesController < ApplicationController
   def show
     @result = result(params["id"])
     @related_shows = related(@result.id)
+    @website = website(@result.id)
   end
 
   private
@@ -21,7 +22,7 @@ class SearchesController < ApplicationController
     AudiosearchServices.new.get_related(id)
   end
 
-  def host
-    AudiosearchServices.new.get_show(id)["hosts"]["name"]
+  def website(id)
+    AudiosearchServices.new.get_website(id)
   end
 end

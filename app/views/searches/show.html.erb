@@ -3,6 +3,9 @@
 <h1><%= @result.title %></h1>
 <p><%= @result.description %></p>
 <p><strong>Number of episodes: </strong> <%= @result.number_of_episodes %> </p>
+<p>
+  <%= link_to "Website", @website if @website.present? %>
+</p>
 <h3>Related shows</h3>
 <p>
   <% @related_shows.each do |related| %>
