@@ -1,4 +1,4 @@
-class Cart
+class Cart < OpenStruct
   attr_accessor :contents
 
   def initialize(initial_contents)

@@ -7,6 +7,7 @@ class SearchesController < ApplicationController
     @result = result(params["id"])
     @related_shows = related(@result.id)
     @website = website(@result.id)
+    @email = primary_email(@website)
   end
 
   private
@@ -24,5 +25,9 @@ class SearchesController < ApplicationController
 
   def website(id)
     AudiosearchServices.new.get_website(id)
+  end
+
+  def primary_email(domain)
+    EmailHunterServices.new.find_primary_email(domain)
   end
 end

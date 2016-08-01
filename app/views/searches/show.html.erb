@@ -6,6 +6,7 @@
 <p>
   <%= link_to "Website", @website if @website.present? %>
 </p>
+<p><strong>Primary email contact</strong>: <%= @email %></p>
 <h3>Related shows</h3>
 <p>
   <% @related_shows.each do |related| %>

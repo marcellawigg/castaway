@@ -22,7 +22,7 @@ class AudiosearchServices
     client.get_show(id)
   end
 
-  def get_website(id)
+  def get_website(id) #make model so that hits API less and more efficient
     if get_show(id).web_profiles.present?
       if client.get_show(id).web_profiles.personal
         client.get_show(id).web_profiles.personal.url
