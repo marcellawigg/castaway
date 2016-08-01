@@ -1,5 +1,8 @@
+<div class="container">
+
 <h1><%= @results.count %> search results for "<%= params["query"] %>"</h1>
 <% @results.each do |result| %>
-  <p><%= result.title %><br>
+  <h3><%= result.title %></h3>3<br>
   <%= result.description %></p>
 <% end %>
+</div>
