@@ -5,6 +5,7 @@ class SearchesController < ApplicationController
 
   def show
     @result = result(params["id"])
+    @related_shows = related(@result.id)
   end
 
   private
@@ -14,6 +15,10 @@ class SearchesController < ApplicationController
 
   def result(id)
     AudiosearchServices.new.get_show(id)
+  end
+
+  def related(id)
+    AudiosearchServices.new.get_related(id)
   end
 
   def host

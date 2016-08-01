@@ -27,6 +27,10 @@ class AudiosearchServices
     client.get_show(id)
   end
 
+  def get_related(id)
+    client.get_related(id, {type: 'shows', size: 5, from: 5})
+  end
+
 
   def parse(response)
     JSON.parse(response.body)
