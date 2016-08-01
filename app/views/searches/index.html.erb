@@ -1,5 +1,8 @@
+<div class="container">
+
 <h1><%= @results.count %> search results for "<%= params["query"] %>"</h1>
 <% @results.each do |result| %>
-  <p><%= result.title %><br>
-  <%= result.description %></p>
+  <h3><%= link_to result.title, searches_show_path(result.id) %></h3><br>
+  <%= result.description %>
 <% end %>
+</div>

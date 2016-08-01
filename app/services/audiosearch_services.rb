@@ -23,6 +23,11 @@ class AudiosearchServices
     client.get_trending
   end
 
+  def get_show(id)
+    client.get_show(id)
+  end
+
+
   def parse(response)
     JSON.parse(response.body)
   end

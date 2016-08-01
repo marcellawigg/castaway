@@ -1,3 +1,5 @@
+<div class="container">
+
 <h1><%= @results.count %> Top Trending Stories</h1>
 <% @results.each do |result| %>
   <h3><%= result.trend %></h3><br>
@@ -5,3 +7,6 @@
     <ul><li><strong><%= episode.show_title %></strong>: <%= episode.title %></li></ul>
   <% end %>
 <% end %>
+</div>
+
+<!-- Modal -->
