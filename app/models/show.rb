@@ -7,6 +7,7 @@ class Show < OpenStruct
   def website
     if show.web_profiles.present?
       show.web_profiles.personal.url || show.web_profiles.other.url
+    end
   end
 
   def self.all_shows
