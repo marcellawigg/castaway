@@ -1,53 +1,47 @@
 class Cart
-  attr_accessor :contents
+  attr_reader :contents
 
   def initialize(initial_contents)
     @contents = initial_contents || {}
   end
 
-  def add_cart_item(need_item_id, quantity)
-    contents[need_item_id.to_s] ||= 0
-    contents[need_item_id.to_s] += quantity.to_i
+  def add_sock(sock_id)
+    contents[sock_id.to_s] ||= 0
+    contents[sock_id.to_s] += 1
   end
 
-  def delete_cart_item(need_item_id)
-    contents.delete(need_item_id.to_s)
-  end
-
-  def change_cart_item_quantity(need_item_id, need_item_quantity)
-    if need_item_quantity.to_i == 0
-      contents.delete(need_item_id)
-    else
-      contents[need_item_id] = need_item_quantity.to_i
-    end
-  end
-
-  def total_items
+  def total
     contents.values.sum
   end
 
+  def count_of(sock_id)
+    contents[sock_id.to_s]
+  end
+
+  def socks
+    contents.map { |sock_id, _quantity| Sock.find(sock_id) }
+  end
+
   def total_price
-    contents.reduce(0) do |total, (item_id, quantity)|
-      total + NeedItem.find(item_id).price * quantity
-    end.to_f
+    socks.map do |sock|
+      count_of(sock.id) * sock.price.to_f.round(2)
+    end.reduce(:+)
   end
 
-  def get_need_items
-    contents.map do |need_item_id, quantity|
-      CartItemHandler.new(need_item_id, quantity)
+  def remove_sock(sock_id)
+    contents.delete_if { |id, _quantity| id == sock_id.to_s }
+  end
+
+  def update_quantity(id, direction)
+    if direction == "plus"
+      contents[id.to_s] += 1
+    elsif direction == "minus" && one?(id)
+      remove_sock(id)
+    else
+      contents[id.to_s] -= 1
     end
   end
 
-  def get_need_items_hash
-    get_need_items.inject({}) do |hash, cart_item|
-      hash[cart_item.need_item] = cart_item.quantity
-      hash
-    end
+  def one?(id)
+    contents[id.to_s] == 1
   end
-
-  def get_need_list_from_cart
-    get_need_items.map do |cart_item|
-      cart_item.need
-    end
-  end
-end
