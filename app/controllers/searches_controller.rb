@@ -12,7 +12,7 @@ class SearchesController < ApplicationController
 
   private
   def results(query)
-     AudiosearchServices.new.search({q: query}).results
+     AudiosearchServices.new.search({q: query, page: 1}).results
   end
 
   def result(id)
