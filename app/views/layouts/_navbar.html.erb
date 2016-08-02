@@ -1,16 +1,15 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar-transparent navbar-fixed-top navbar-static-top" role="navigation">
   <div class="navbar-header">
     <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="/">Castaway</a>
+    <a class="navbar-brand" href="/">Cast-Away</a>
   </div>
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
       <li>
         <% if current_user %>
-          Hello, <%= current_user.name.split(" ").first %>
           <%= link_to "Logout", logout_path, method: :delete %>
           <% else %>
           <%= link_to "Log in", login_path %>

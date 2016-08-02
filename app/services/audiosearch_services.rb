@@ -22,23 +22,21 @@ class AudiosearchServices
     client.get_show(id)
   end
 
-  def get_website(id) #make model so that hits API less and more efficient
-    if get_show(id).web_profiles.present?
-      if client.get_show(id).web_profiles.personal
-        client.get_show(id).web_profiles.personal.url
-      else
-        client.get_show(id).web_profiles.other.url
-      end
-    end
-  end
+  # def get_website(id) #make model so that hits API less and more efficient
+  #   if get_show(id).web_profiles.present?
+  #     if client.get_show(id).web_profiles.personal
+  #       client.get_show(id).web_profiles.personal.url
+  #     else
+  #       client.get_show(id).web_profiles.other.url
+  #     end
+  #   end
+  # end
 
   def get_related(id)
     client.get_related(id, {type: 'shows', size: 5, from: 5})
   end
 
-
   def parse(response)
     JSON.parse(response.body)
   end
-
 end
