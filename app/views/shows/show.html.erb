@@ -5,7 +5,6 @@
 <%= image_tag(@show.image_path, height: "200") %>
 <h1><%= @show.title %></h1>
 <p><%= @show.description %></p>
-<p><strong>Number of episodes: </strong> <%= @show.number_of_episodes %> </p>
 <p>
   <%= link_to "Website", @show.website if @show.website %>
 </p>
