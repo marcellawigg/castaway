@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   get "auth/twitter/callback", to: "sessions#create"
   delete '/logout', as: :logout, to: 'sessions#destroy'
-  get '/shows/search', to: 'searches#index'
+  get '/shows/search', to: 'shows#index'
+
   resources :shows, only: [:show]
   resources :trending, only: [:index], as: :trending
 end

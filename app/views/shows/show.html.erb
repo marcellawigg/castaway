@@ -1,6 +1,7 @@
 <%= render "layouts/navbar" %>
 <div class="container">
 <%= button_to "Add to Cart", root_path, method: :get %>
+
 <%= image_path(@show.image_path) %>
 <h1><%= @show.title %></h1>
 <p><%= @show.description %></p>

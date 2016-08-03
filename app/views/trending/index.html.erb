@@ -1,11 +1,13 @@
 <%= render "layouts/navbar" %>
+<% cache(action_suffix: "primary") do %>
 <div class="container">
 
 <h1><%= @results.count %> Top Trending Stories</h1>
 <% @results.each do |result| %>
   <h3><%= result.trend %></h3><br>
   <% result.related_episodes.each do |episode| %>
-    <ul><li><strong><%= link_to episode.show_title, searches_show_path(episode.show_id) %></strong>: <%= episode.title %></li></ul>
+    <ul><li><strong><%= link_to episode.show_title, show_path(episode.show_id) %></strong>: <%= episode.title %></li></ul>
   <% end %>
 <% end %>
 </div>
+<% end %>
