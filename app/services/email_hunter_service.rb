@@ -1,6 +1,6 @@
 require 'uri'
 
-class EmailHunterServices
+class EmailHunterService
 
   def initialize
     @_connection = Faraday.new("https://api.emailhunter.co/v1/")
@@ -11,7 +11,6 @@ class EmailHunterServices
     if domain.nil?
       "No website domain found."
     else
-      domain = URI.parse(domain).host
       response = @_connection.get "search?domain=#{domain}&api_key=#{@_api_key}"
       email_hash = parse(response)["emails"]
       if email_hash.empty?

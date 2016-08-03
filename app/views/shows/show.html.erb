@@ -5,14 +5,16 @@
 <p><%= @show.description %></p>
 <p><strong>Number of episodes: </strong> <%= @show.number_of_episodes %> </p>
 <p>
-  <%= link_to "Website", @show.website if @show.website.present? %>
+  <%= link_to "Website", @show.website if @show.website %>
 </p>
-<!-- <p><strong>Primary email contact</strong>: <%= @email %></p> -->
+
+
+<p><strong>Primary email contact</strong>: <%= @show.email %></p>
 <!-- <h3>Related shows</h3>
 <p>
-  <% @related_shows.each do |related| %>
-    <%= link_to related.title, searches_show_path(related.id) %><br>
-  <% end %>
+  <#% @related_shows.each do |related| %>
+    <#%= link_to related.title, searches_show_path(related.id) %><br>
+  <#% end %>
 </p> -->
 
 </div>

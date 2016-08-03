@@ -1,22 +1,22 @@
 class SearchesController < ApplicationController
   def index
-    @results = results(params["query"])
+    @pg_search_documents = PgSearch.multisearch(params["query"])
   end
 
   private
   def results(query)
-     AudiosearchServices.new.search({q: query, page: 1}).results
+     DatabaseAudiosearchService.new.search({q: query, page: 1}).results
   end
 
   def result(id)
-    AudiosearchServices.new.get_show(id)
+    DynamicAudiosearchService.new.get_show(id)
   end
 
   def related(id)
-    AudiosearchServices.new.get_related(id)
+    DynamicAudiosearchService.new.get_related(id)
   end
 
   def website(id)
-    AudiosearchServices.new.get_website(id)
+    DynamicAudiosearchService.new.get_website(id)
   end
 end

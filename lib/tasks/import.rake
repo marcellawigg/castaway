@@ -1,7 +1,7 @@
 namespace :import do
   desc "Import shows"
   task create_shows: :environment do
-    service = DatabaseAudiosearchServices.new
+    service = DatabaseAudiosearchService.new
     service.populate_database
   end
 end
