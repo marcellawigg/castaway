@@ -1,6 +1,5 @@
 <div class="container">
 
-  <% cache("results-index") do %>
 <h1><%= @results.count %> search results for "<%= params[:query] %>"</h1>
 <% @results.each do |show| %>
 <div class="grid">
@@ -10,4 +9,3 @@
   </div>
   <% end %>
 </div>
-<% end %> 
