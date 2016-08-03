@@ -16,6 +16,9 @@
           <%= link_to "Log in", login_path %>
           <% end %>
       </li>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  <ul class="nav navbar-nav navbar-right" id="navbar-links">
+    <li><%= link_to "Cart (#{@cart.contents.count})", cart_path %></li>
     </ul>
   </div>
 </nav>
