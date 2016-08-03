@@ -91,3 +91,46 @@ body, html {
 .navbar-transparent .navbar-nav > .dropdown > a .caret {
     display: none;
 }
+
+
+.carousel {
+  height:100%;
+  width: 100%;
+  background-size: cover;
+  overflow: hidden;
+}
+.carousel-caption {
+   position: absolute;
+   top:400px
+}
+
+.carousel .item {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-inner > .item > img {
+  text-align: center;
+  margin: 0 auto;
+  -webkit-filter: brightness(50%); /* Chrome, Safari, Opera */
+  filter: brightness(50%);
+}
+
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    display: block;
+    max-height: 100%;
+    line-height: 1;
+    width: 100%;
+    filter: brightness(90%);
+}
+
+.fill {
+    width: 100%;
+    height: auto;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}

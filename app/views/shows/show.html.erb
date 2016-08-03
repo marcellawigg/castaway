@@ -1,5 +1,5 @@
 <%= render "layouts/navbar" %>
-<% cache(action_suffix: "primary") do %>
+<!-- <#% cache_key_for(Show, "show") do %> -->
 <div class="container">
 <%= button_to "Add to Cart", root_path, method: :get %>
 
@@ -17,4 +17,4 @@
   <%= show_presenter.available %>
 <% end %>
 </div>
-<% end %>
+<!-- <#% end %> -->
