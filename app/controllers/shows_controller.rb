@@ -6,6 +6,6 @@ class ShowsController < ApplicationController
 
   private
   def show_params
-    params.require(:show).permit(:title, :description, :number_of_episodes)
+    params.require(:show).permit(:title, :description, :number_of_episodes, :image_path)
   end
 end

@@ -1,12 +1,7 @@
 class DynamicAudiosearchService < BaseAudiosearchService
 
-
   def trending
     client.get_trending
-  end
-
-  def get_show(id) #won't need this
-    client.get_show(id)
   end
 
   def get_website(id)

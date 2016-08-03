@@ -8,4 +8,8 @@ class BaseAudiosearchService
         debug: false
         )
   end
+
+  def get_show(id) #won't need this
+    client.get_show(id)
+  end
 end

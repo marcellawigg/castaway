@@ -1,5 +1,6 @@
 class Show < ActiveRecord::Base
   validates_uniqueness_of :id
+  validates_presence_of :image_path
   include PgSearch
   pg_search_scope :search_for_shows, :against => [:title, :description, :id]
 
