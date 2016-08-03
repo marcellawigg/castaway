@@ -10,7 +10,7 @@ class DatabaseAudiosearchService < BaseAudiosearchService
     pages = (0..total_pages).to_a
     pages.each do |page|
       search({ q: '*', page: page}, 'shows').results.each do |show|
-        Show.create(id: show["id"], title: show["title"], description: show["description"], number_of_episodes: show["number_of_episodes"].to_i, image_path:  show["image_files"] ? show["image_files"].first["file"]["url"] : nil)
+        Show.create(id: show["id"], title: show["title"], description: show["description"], number_of_episodes: show["number_of_episodes"].to_i, image_path:  show["image_files"] ? show["image_files"].first["file"]["url"] : nil, price: nil)
         puts "#{show.title} created"
       end
     end
