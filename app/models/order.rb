@@ -14,7 +14,7 @@ class Order < ActiveRecord::Base
   end
 
   def create_order_items(cart_contents)
-    cart_contents.map do |sock_id, quantity|
+    cart_contents.map do |show_id, quantity|
       OrderItem.create(order_id:    id,
                        show_id:     show_id,
                        quantity:    quantity,

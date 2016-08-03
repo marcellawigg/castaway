@@ -1,4 +1,8 @@
-class User < OpenStruct
+class User < ActiveRecord::Base
+  has_many :orders
+  validates :name, presence: true
+  validates :handle, presence: true, uniqueness: true, if "uid.nil?"
+  enum role: %w(default admin)
 
   def self.from_omniauth(auth_info)
     where(uid: auth_info[:uid]).first_or_create do |new_user|
@@ -10,6 +14,7 @@ class User < OpenStruct
       new_user.oauth_token        = auth_info.credentials.token
       new_user.oauth_secret       = auth_info.credentials.secret
       new_user.location           = auth_info.extra.raw_info.location
+      new_user.role               = 0
     end
   end
 end

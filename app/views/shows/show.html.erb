@@ -12,6 +12,9 @@
 
 
 <p><strong>Primary email contact</strong>: <%= @show.email %></p>
+<% present @show do |show_presenter| %>
+  <%= sock_presenter.available %>
+<% end %>
 <!-- <h3>Related shows</h3>
 <p>
   <#% @related_shows.each do |related| %>
