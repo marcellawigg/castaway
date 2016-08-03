@@ -1,0 +1,18 @@
+<%= render "layouts/navbar" %>
+<div class="container">
+<%= button_to "Add to Cart", root_path, method: :get %>
+<h1><%= @show.title %></h1>
+<p><%= @show.description %></p>
+<p><strong>Number of episodes: </strong> <%= @show.number_of_episodes %> </p>
+<p>
+  <%= link_to "Website", @show.website if @show.website.present? %>
+</p>
+<!-- <p><strong>Primary email contact</strong>: <%= @email %></p> -->
+<!-- <h3>Related shows</h3>
+<p>
+  <% @related_shows.each do |related| %>
+    <%= link_to related.title, searches_show_path(related.id) %><br>
+  <% end %>
+</p> -->
+
+</div>
