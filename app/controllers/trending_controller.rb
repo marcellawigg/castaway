@@ -1,10 +1,11 @@
 class TrendingController < ApplicationController
   def index
     @results = results
+    fresh_when @results
   end
 
   private
   def results
-     AudiosearchServices.new.trending
+     DynamicAudiosearchService.new.trending
   end
 end
