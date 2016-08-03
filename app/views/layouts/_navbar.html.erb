@@ -1,4 +1,3 @@
-<% cache(action_suffix: "primary") do %>
 <% if @homes_show %>
 <body>
   <nav class="navbar-transparent navbar-fixed-top navbar-static-top" >
@@ -10,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="brand brand-name-home navbar-left" href="/">CAST-AWAY</a>    </div>
+      <%= link_to "CAST-AWAY", root_path, class: "brand-name-home" %> </a>    </div>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
@@ -38,5 +37,4 @@
       </div>
     </div>
   </nav>
-<% end %>
 <% end %>
