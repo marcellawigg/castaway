@@ -1,5 +1,5 @@
 class SearchesController < ApplicationController
   def index
-    @pg_search_documents = PgSearch.multisearch(params["query"])
+    @results = Show.search_for_shows(params[:query])
   end
 end

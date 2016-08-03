@@ -2,9 +2,9 @@
 <% cache(action_suffix: "primary") do %>
 <div class="container">
 
-<h1><%= @pg_search_documents.count %> search results for "<%= params["query"] %>"</h1>
-<% @pg_search_documents.each do |pg_search_document| %>
-  <p><%= link_to pg_search_document.searchable.title, pg_search_document.searchable %></p>
+<h1><%= @results.count %> search results for "<%= params[:query] %>"</h1>
+<% @results.each do |show| %>
+  <p><%= link_to show.title, show_path(show.id) %></p>
   <% end %>
 </div>
 <% end %>

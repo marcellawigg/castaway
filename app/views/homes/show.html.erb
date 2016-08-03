@@ -11,7 +11,7 @@
 <%= button_to "What's Trending", trending_index_path, method: :get %>
 
 <%= form_tag shows_search_path, method: :get do %>
-  <%= text_field_tag :query, params["query"] %>
+  <%= text_field_tag :query, params[:query] %>
   <%= submit_tag "Search", name: nil %>
 <% end %>
 
