@@ -1,8 +1,10 @@
+<%= render "layouts/navbar" %>
+<% cache(action_suffix: "primary") do %>
 <div class="container">
 
-<h1><%= @results.count %> search results for "<%= params["query"] %>"</h1>
-<% @results.each do |result| %>
-  <h3><%= link_to result.title, searches_show_path(result.id) %></h3><br>
-  <%= result.description %>
-<% end %>
+<h1><%= @results.count %> search results for "<%= params[:query] %>"</h1>
+<% @results.each do |show| %>
+  <p><%= link_to show.title, show_path(show.id) %></p>
+  <% end %>
 </div>
+<% end %>

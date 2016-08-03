@@ -1,24 +1,5 @@
-<div class="home">
-<nav class="navbar navbar-default" role="navigation">
-  <div class="navbar-header">
-    <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="/">Castaway</a>
-  </div>
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav">
-      <li>
-        <% if current_user %>
-          <%= link_to "Logout", logout_path, method: :delete %>
-          <% else %>
-          <%= link_to "Log in", login_path %>
-          <% end %>
-      </li>
-    </ul>
-  </div>
-</nav>
+<%= render "layouts/navbar" %>
+<% cache(action_suffix: "primary") do %>
 <div id="logo">Cast-Away</div>
 <div class="text">
 
@@ -27,10 +8,13 @@
 <% else %>
 <h1>Hello!</h1>
 <% end %>
-<%= button_to "What's Trending", trending_path, method: :get %>
+<%= button_to "What's Trending", trending_index_path, method: :get %>
+
 <%= form_tag shows_search_path, method: :get do %>
-<%= text_field_tag :query, params["query"] %>
-<%= submit_tag "Search", name: nil %>
+  <%= text_field_tag :query, params[:query] %>
+  <%= submit_tag "Search", name: nil %>
 <% end %>
+
 </div>
 </div>
+<% end %>
