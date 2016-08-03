@@ -24,12 +24,28 @@ body, html {
   background: asset_path('images/earbuds.png') no-repeat center center fixed;
 }
 
-.navbar {
+.navbar-transparent {
+    border-width: 0px;
+    -webkit-box-shadow: 0px 0px;
+    width: 100%;
+    box-shadow: 0px 0px;
+    color: transparent;
+    background-color: rgba(0,0,0,0.0);
+    background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
+    background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
 }
 
 .navbar-custom {
-  border-width: 0px;
+  color: black;
+  background-color:white;
 }
+
+.navbar-nav > li {
+  font-size: 14px;
+  padding-left: 50px;
+  padding-left: 10px;
+  }
 
 .navbar-custom .navbar-nav > .dropdown > a .caret {
     display: none;
@@ -92,12 +108,11 @@ body, html {
     display: none;
 }
 
-
 .carousel {
-  height:100%;
+  max-height: 700px;
   width: 100%;
+  overflow: hidden !important;
   background-size: cover;
-  overflow: hidden;
 }
 .carousel-caption {
    position: absolute;
@@ -133,4 +148,84 @@ body, html {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+div.form-group {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  top: 200px;
+  z-index:99;
+}
+div.form-group input {
+   color: #999;
+   font-weight: bold;
+   font-size: 24px;
+   padding: 10px;
+   border: 2px solid #999;
+   border-radius:2px;
+}
+
+.home-button {
+  padding: 18px 28px;
+  font-size: 22px;
+  line-height: normal;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+    background: none;
+    border: 2px solid white;
+    position: relative;
+    text-align: center;
+    margin-top: 100;
+}
+
+.home-button:hover {
+    background-color: white;
+    opacity: 0.6;
+    position: relative;
+    text-align: center;
+    border: 2px solid white;
+    color: black;
+    margin-top: 150;
+}
+
+.navbar-custom {
+  color: black;
+  background-color:white;
+}
+
+.carousel-indicators li { visibility: hidden; }
+
+.navbar-nav > li {
+  font-size: 14px;
+  padding-left: 50px;
+  padding-left: 10px;
+  }
+.dropdown-menu {
+  font-size: 14px;
+  }
+
+.dropdown-menu>li>a:hover {
+   background-color: silver !important;
+ }
+
+.navbar-transparent a {
+  color:white;
+}
+
+.navbar-transparent .navbar-nav > li > a:hover, .navbar-transparent .navbar-nav > li > a:focus {
+    background-color: white;
+    opacity: 0.6;
+    color: black;
+}
+
+.navbar-nav > li{
+  margin-left:10px;
+  margin-right:10px;
+}
+
+.navbar-transparent .navbar-nav > .dropdown > a .caret {
+    display: none;
 }
