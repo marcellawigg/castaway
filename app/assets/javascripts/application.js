@@ -14,3 +14,23 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).ready(function() {
+    $('.carousel').carousel({
+      interval: 2400
+    })
+  });
+
+  $(function () {
+  var w = $(window);
+  w.scroll(function () {
+    if (w.scrollTop() !== 0) {
+      $(".d").removeClass("visible");
+      return;
+    }
+
+    $(".d").addClass("visible");
+  });
+
+  $(".d").addClass("visible");
+
+});

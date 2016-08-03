@@ -1,25 +1,43 @@
 <% cache(action_suffix: "primary") do %>
-<nav class="navbar-transparent navbar-fixed-top navbar-static-top" role="navigation">
-  <div class="navbar-header">
-    <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="/">Cast-Away</a>
-  </div>
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav">
-      <li>
+<% if @homes_show %>
+<body>
+  <nav class="navbar-transparent navbar-fixed-top navbar-static-top" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="brand brand-name-landing-page navbar-left" href="/">CAST-AWAY</a>
+    </div>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
-          <%= link_to "Logout", logout_path, method: :delete %>
-          <% else %>
-          <%= link_to "Log in", login_path %>
+          <li class="custom-nav"> <%= "Logged in as #{current_user.handle}" %> </li>
+          <li class="custom-nav"><%= link_to "Logout", logout_path, method: :delete %></li>
+          <li class="custom-nav"><%= "Cart (#{@cart.contents.count})" %></li>
+
+        <% else %>
+          <li class="custom-nav"><%= link_to "Login", login_path %></li>
+          <li class="custom-nav"><%= "Cart (#{@cart.contents.count})" %></li>
           <% end %>
-      </li>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-  <ul class="nav navbar-nav navbar-right" id="navbar-links">
-    <li><%= link_to "Cart (#{@cart.contents.count})", cart_path %></li>
-    </ul>
-  </div>
-</nav>
+      </div>
+    </nav>
+    <% else %>
+    <div class="container-fluid">
+    <nav class="navbar navbar-custom" >
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand brand-name-all navbar-left" href="/">CAST-AWAY</a>
+      </div>
+    </div>
+  </nav>
+<% end %>
 <% end %>

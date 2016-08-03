@@ -1,110 +1,44 @@
 <%= render "layouts/navbar" %>
 <body style="margin:0; padding:0">
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active">
       </li>
       <li data-target="#myCarousel" data-slide-to="1">
       </li>
-      <li data-target="#myCarousel" data-slide-to="2">
-      </li>
     </ol>
     <div class="carousel-inner">
       <div class="item active">
-        <%= image_tag asset_path('lgbti.jpg'), class: 'carousel-img' %>
-        <div class="container">
-          <div class="carousel-caption">
-            <%= button_to "LGBTQIA", cause_path('lgbti'), method: :get, class: 'home-cause-button' %>
-          </div>
-        </div>
+        <%= image_tag asset_path('microphone.jpg'), class: 'carousel-img' %>
       </div>
       <div class="item">
-        <%= image_tag asset_path('environment.jpg'), class: 'carousel-img' %>
-        <div class="container">
-          <div class="carousel-caption">
-          <%= button_to "Environment", cause_path('environment'), method: :get, class: 'home-cause-button' %>
-        </div>
-        </div>
+        <%= image_tag asset_path('headphones.jpg'), class: 'carousel-img' %>
       </div>
-        <div class="item">
-          <%= image_tag asset_path('youth.jpg'), class: 'carousel-img' %>
-          <div class="container">
-            <div class="carousel-caption">
-              <%= button_to "Youth", cause_path('youth'), method: :get, class: 'home-cause-button' %>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <%= image_tag asset_path('education.jpg'), class: 'carousel-img' %>
-          <div class="container">
-            <div class="carousel-caption">
-              <%= button_to "Education", cause_path('education'), method: :get, class: 'home-cause-button' %>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <%= image_tag asset_path('economic-development.jpg'), class: 'carousel-img' %>
-          <div class="container">
-            <div class="carousel-caption">
-              <%= button_to "Economic Development", cause_path('economic-development'), method: :get, class: 'home-cause-button' %>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <%= image_tag asset_path('immigration.jpg'), class: 'carousel-img' %>
-          <div class="container">
-            <div class="carousel-caption">
-            </div>
-          </div>
-        </div>
-      <div class="item">
-        <%= image_tag asset_path('poverty.jpg'), class: 'carousel-img' %>
-        <div class="container-fluid">
-          <div class="carousel-caption">
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <%= image_tag asset_path('animal-rights.jpg'), class: 'carousel-img' %>
-        <div class="container">
-          <div class="carousel-caption">
-          </div>
-        </div>
-      </div>
-    <div class="item">
-      <%= image_tag asset_path('civil-rights.jpg'), class: 'carousel-img' %>
-      <div class="container">
-        <div class="carousel-caption">
-        </div>
-      </div>
-    </div>
   </div>
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
     </a>
     <a class="right carousel-control" href="#myCarousel" data-slide="next">
     </a>
-    <div class="add-charity">
-      <%= button_to "Add Your Charity", new_charity_path, method: :get, class: 'add-charity-button' %>
+    <div class="company-logo">
+      <div id="logo">
+        Cast-Away
+      </div>
     </div>
+    <div class="form-group" >
+          <%= button_to "What's Trending", trending_index_path, method: :get, class: 'home-button' %>
+          <%= form_tag shows_search_path, method: :get do %>
+            <%= text_field_tag :query, params[:query] %>
+            <%= submit_tag "Search", name: nil, class: 'home-button' %>
+            <% end %>
+            <a class="d" href="#about">
+              <div class="a"></div>
+        </div>
+      </div>
+      <!-- <div class="container">
 
-
-<% cache(action_suffix: "primary") do %>
-<div id="logo">Cast-Away</div>
-<div class="text">
-
-<% if current_user %>
-<h1>Hello, <%= current_user.name.split(" ").first %>!</h1>
-<% else %>
-<h1>Hello!</h1>
-<% end %>
-<%= button_to "What's Trending", trending_index_path, method: :get %>
-
-<%= form_tag shows_search_path, method: :get do %>
-  <%= text_field_tag :query, params[:query] %>
-  <%= submit_tag "Search", name: nil %>
-<% end %>
-
-</div>
-</div>
-<% end %>
+      <div id="about">
+        there's nothing more beautiful than listening to a podcast.
+      </div>
+    </div> -->
