@@ -1,0 +1,102 @@
+@font-face {
+  font-family: 'Tommaso';
+  src: url('Tommaso.otf');
+  // src: url('Tommaso.eot?iefix') format('eot'),
+  // url('Tommaso.woff') format('woff'),
+  // url('Tommaso.woff2') format('woff2'),
+  // url('Tommaso.ttf') format('truetype'),
+  // url('Tommaso.svg#webfont3AwWkQXK') format('svg');
+  // font-weight: normal;
+  // font-style: normal;
+}
+// background-color: transparent;
+// color: white;
+
+#logo {
+  font-size: 150px;
+  font-family: 'Tommaso', sans-serif;
+  color: #fff;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.text {
+  text-align: center;
+}
+
+body, html {
+  color: black;
+  background-color: transparent;
+  background: asset_path('images/earbuds.png') no-repeat center center fixed;
+}
+
+.navbar {
+}
+
+.navbar-custom {
+  border-width: 0px;
+}
+
+.navbar-custom .navbar-nav > .dropdown > a .caret {
+    display: none;
+}
+
+ .navbar-custom .dropdown-toggle {
+  color: black;
+}
+
+.nav.navbar-custom.navbar-right li a {
+    color: black;
+}
+
+.navbar-transparent {
+    border-width: 0px;
+    -webkit-box-shadow: 0px 0px;
+    width: 100%;
+    box-shadow: 0px 0px;
+    color: transparent;
+    background-color: rgba(0,0,0,0.0);
+    background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
+    background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+}
+
+.navbar-custom {
+  color: black;
+  background-color:white;
+}
+
+.navbar-nav > li {
+  font-size: 14px;
+  padding-left: 50px;
+  padding-left: 10px;
+  }
+.dropdown-menu {
+  font-size: 14px;
+  }
+
+.dropdown-menu>li>a:hover {
+   background-color: silver !important;
+ }
+
+.navbar-transparent a {
+  color:white;
+}
+
+.navbar-transparent .navbar-nav > li > a:hover, .navbar-transparent .navbar-nav > li > a:focus {
+    background-color: white;
+    opacity: 0.6;
+    color: black;
+}
+
+.navbar-nav > li{
+  margin-left:10px;
+  margin-right:10px;
+}
+
+.navbar-transparent .navbar-nav > .dropdown > a .caret {
+    display: none;
+}

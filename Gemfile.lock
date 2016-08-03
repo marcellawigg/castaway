@@ -33,6 +33,8 @@ GEM
       activemodel (= 5.0.0)
       activesupport (= 5.0.0)
       arel (~> 7.0)
+    activerecord-import (0.15.0)
+      activerecord (>= 3.2)
     activesupport (5.0.0)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (~> 0.7)
@@ -51,6 +53,9 @@ GEM
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
     builder (3.2.2)
+    bullet (5.1.1)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.10.0)
     byebug (9.0.5)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
@@ -75,6 +80,8 @@ GEM
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     hashie (3.4.4)
+    hashie-forbidden_attributes (0.1.1)
+      hashie (>= 3.0)
     i18n (0.7.0)
     jbuilder (2.6.0)
       activesupport (>= 3.0.0, < 5.1)
@@ -122,6 +129,10 @@ GEM
       json (~> 1.3)
       omniauth-oauth (~> 1.1)
     pg (0.18.4)
+    pg_search (1.0.6)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
+      arel
     pkg-config (1.1.7)
     puma (3.6.0)
     rack (2.0.1)
@@ -199,6 +210,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
+    uniform_notifier (1.10.0)
     web-console (3.3.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -212,16 +224,20 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-import (~> 0.15.0)
   audiosearch (~> 1.0.2)
   bootstrap-sass (~> 3.3.7)
+  bullet
   byebug
   coffee-rails (~> 4.2)
   figaro
+  hashie-forbidden_attributes
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
   omniauth-twitter
   pg
+  pg_search
   puma (~> 3.0)
   rails (~> 5.0.0)
   rspec-rails
