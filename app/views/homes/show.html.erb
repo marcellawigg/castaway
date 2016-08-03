@@ -8,27 +8,37 @@
       </li>
       <li data-target="#myCarousel" data-slide-to="1">
       </li>
-      <li data-target="#myCarousel" data-slide-to="2">
-      </li>
     </ol>
     <div class="carousel-inner">
       <div class="item active">
+        <%= image_tag asset_path('microphone.jpg'), class: 'carousel-img' %>
+      </div>
+      <div class="item">
         <%= image_tag asset_path('headphones.jpg'), class: 'carousel-img' %>
-        <div class="container">
-          <div class="carousel-caption">
-          </div>
-        </div>
       </div>
   </div>
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
     </a>
     <a class="right carousel-control" href="#myCarousel" data-slide="next">
     </a>
+    <div class="company-logo">
+      <div id="logo">
+        Cast-Away
+      </div>
+    </div>
     <div class="form-group" >
           <%= button_to "What's Trending", trending_index_path, method: :get, class: 'home-button' %>
           <%= form_tag shows_search_path, method: :get do %>
             <%= text_field_tag :query, params[:query] %>
             <%= submit_tag "Search", name: nil, class: 'home-button' %>
             <% end %>
+            <a class="d" href="#about">
+              <div class="a"></div>
         </div>
       </div>
+      <!-- <div class="container">
+
+      <div id="about">
+        there's nothing more beautiful than listening to a podcast.
+      </div>
+    </div> -->

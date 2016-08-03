@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Tommaso';
-  src: url('fonts/Tommaso.otf');
+  src: url('/assets/Tommaso.otf');
 }
 
 #logo {
-  font-size: 150px;
+  font-size: 280px;
   font-family: 'Tommaso', sans-serif;
   color: #fff;
   opacity: 0.8;
@@ -18,10 +18,14 @@
   text-align: center;
 }
 
+body {
+  font-family: 'Lato';
+  padding-top: 70px;
+}
+
 body, html {
   color: black;
   background-color: transparent;
-  background: asset_path('images/earbuds.png') no-repeat center center fixed;
 }
 
 .navbar-transparent {
@@ -155,7 +159,7 @@ div.form-group {
   width: 100%;
   height: 100px;
   text-align: center;
-  top: 200px;
+  top: 430px;
   z-index:99;
 }
 div.form-group input {
@@ -167,6 +171,13 @@ div.form-group input {
    border-radius:2px;
 }
 
+.company-logo {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  text-align: center;
+}
+
 .home-button {
   padding: 18px 28px;
   font-size: 22px;
@@ -175,7 +186,8 @@ div.form-group input {
      -moz-border-radius: 8px;
           border-radius: 8px;
     background: none;
-    border: 2px solid white;
+    color: white !important;
+    border: 2px solid white !important;
     position: relative;
     text-align: center;
     margin-top: 100;
@@ -228,4 +240,95 @@ div.form-group input {
 
 .navbar-transparent .navbar-nav > .dropdown > a .caret {
     display: none;
+}
+
+section {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+section + section {
+  background: #333;
+}
+
+.d.visible {
+  bottom: 20px;
+}
+
+.d {
+  border: 1px solid #eee;
+  border-radius: 50%;
+  color: #eee;
+  text-align: center;
+
+  bottom: -120px;
+  display: block;
+  left: 50%;
+  margin-left: -50px;
+  position: absolute;
+
+  height: 100px;
+  line-height: 100px;
+  width: 100px;
+
+  -webkit-animation: a 4s infinite;
+  -moz-animation: a 4s infinite;
+  -o-animation: a 4s infinite;
+  animation: a 4s infinite;
+
+  -webkit-transition: bottom 1s ease;
+  -moz-transition: bottom 1s ease;
+  -o-transition: bottom 1s ease;
+  transition: bottom 1s ease;
+}
+
+.a {
+  border-right: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+  border-radius: 2px;
+  color: #eee;
+  display: inline-block;
+  font-size: 0;
+  height: 50px;
+  line-height: 0;
+  margin-top: -25px;
+  text-align: center;
+  vertical-align: middle;
+  width: 50px;
+
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(45deg);
+}
+
+@-webkit-keyframes a {
+  0%   { opacity: .3; }
+  50%   { opacity: 1; }
+  100% { opacity: .3; }
+}
+
+@-moz-keyframes a {
+  0%   { opacity: .3; }
+  50%   { opacity: 1; }
+  100% { opacity: .3; }
+}
+
+@-o-keyframes a {
+  0%   { opacity: .3; }
+  50%   { opacity: 1; }
+  100% { opacity: .3; }
+}
+
+@keyframes a {
+  /*0%   { opacity: .3; }
+  50%   { opacity: 1; }
+  100% { opacity: .3; }*/
+
+  0%   { border-color: #eee; }
+  50%   { border-color: #555; }
+  100% { border-color: #eee; }
+
 }
