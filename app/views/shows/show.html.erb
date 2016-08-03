@@ -2,7 +2,7 @@
 <div class="container">
 <%= button_to "Add to Cart", root_path, method: :get %>
 
-<%= image_path(@show.image_path) %>
+<%= image_tag(@show.image_path, height: "200") %>
 <h1><%= @show.title %></h1>
 <p><%= @show.description %></p>
 <p><strong>Number of episodes: </strong> <%= @show.number_of_episodes %> </p>
