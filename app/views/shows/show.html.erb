@@ -1,4 +1,5 @@
 <%= render "layouts/navbar" %>
+<% cache(action_suffix: "primary") do %>
 <div class="container">
 <%= button_to "Add to Cart", root_path, method: :get %>
 
@@ -13,7 +14,7 @@
 
 <p><strong>Primary email contact</strong>: <%= @show.email %></p>
 <% present @show do |show_presenter| %>
-  <%= sock_presenter.available %>
+  <%= show_presenter.available %>
 <% end %>
 <!-- <h3>Related shows</h3>
 <p>
@@ -23,3 +24,4 @@
 </p> -->
 
 </div>
+<% end %>
