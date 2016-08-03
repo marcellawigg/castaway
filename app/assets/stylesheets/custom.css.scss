@@ -14,13 +14,50 @@
   text-align: center;
 }
 
+.brand-name-home {
+ font-family: 'Tommaso', sans-serif;
+ font-size: 30px;
+ font-weight: bold;
+ color: #000000;
+ text-decoration: none;
+ padding-top: 15px;
+ padding-left: 30px;
+}
+
+.brand-name-home:hover {
+  font-family: 'Tommaso', sans-serif;;
+  font-size: 30px;
+  font-weight: bold;
+  color: turquoise;
+  text-decoration: none;
+  padding-top: 15px;
+ }
+
+ .brand-name-general {
+  font-family: 'Tommaso', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  padding-top: 15px;
+  padding-left: 30px;
+ }
+
+ .brand-name-general:hover {
+   font-family: 'Tommaso', sans-serif;;
+   font-size: 30px;
+   font-weight: bold;
+   color: turquoise;
+   text-decoration: none;
+   padding-top: 15px;
+  }
+
 .text {
   text-align: center;
 }
 
 body {
   font-family: 'Lato';
-  padding-top: 70px;
 }
 
 body, html {
