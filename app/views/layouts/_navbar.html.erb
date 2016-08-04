@@ -13,19 +13,19 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
-          <li class="custom-nav"> Logged in as <%= current_user.handle %> </li>
-          <li class="custom-nav"><%= link_to "Logout", logout_path, method: :delete %></li>
-          <li class="custom-nav">Cart (<%= @cart.contents.count})%></li>
+        <li><%= link_to "Cart (#{@cart.contents.count})", cart_path %></li>
+          <li><%= link_to "Logout", logout_path, method: :delete %></li>
+          <li><%= link_to(cl_image_tag(current_user.avatar, size: "20x20", crop: :fill), orders_path) %> </li>
         <% else %>
-          <li class="custom-nav"><%= link_to "Login", login_path %></li>
-          <li class="custom-nav">Cart (<%= @cart.contents.count})%></li>
+          <li><%= link_to "Login", login_path %></li>
+          <li><%= link_to "Cart (#{@cart.contents.count})", cart_path %></li>
           <% end %>
         </ul>
       </div>
     </nav>
     <% else %>
     <div class="container-fluid">
-    <nav class="navbar navbar-custom col-sm-12 col-md-12 col-lg-12" >
+    <nav class="nav navbar-custom col-sm-12 col-md-12 col-lg-12" >
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
@@ -34,6 +34,17 @@
           <span class="icon-bar"></span>
         </button>
         <a class="brand brand-name-general navbar-left" href="/">CAST-AWAY</a>    </div>
+        <ul class="nav navbar-nav navbar-right">
+          <% if current_user %>
+            <li><%= link_to "Cart (#{@cart.contents.count})", cart_path, class: "nav navbar-custom navbar-right" %></li>
+            <li><%= link_to "Logout", logout_path, method: :delete, class: "nav navbar-custom navbar-right" %></li>
+            <li><%= link_to(cl_image_tag(current_user.avatar, size: "20x20", crop: :fill), orders_path, class: "nav navbar-custom navbar-right") %> </li></ul>
+          <% else %>
+          <li class="navbar-custom"><%= link_to "Cart (#{@cart.contents.count})", cart_path %></li>
+            <li class="navbar-custom"><%= link_to "Login", login_path %></li>
+            <% end %>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>

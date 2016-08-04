@@ -16,7 +16,7 @@ module ApplicationHelper
 
   def checkout_option
    if !current_user
-     button_to("Login or Create Account to Purchase Socks", login_path(previous_page: "cart" ), method: :get, class: "btn btn-custom btn-person")
+     button_to("Log in to purchase advertisements", login_path(previous_page: "cart" ), method: :get, class: "btn btn-custom btn-person")
    else
      button_to("Checkout", new_charge_path, method: :get, class: "btn btn-custom btn-person")
    end
