@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   get '/shows/search', to: 'shows#index'
   get '/cart', to: 'cart#show'
   patch '/cart', to: 'cart#update'
-  resources :orders, only: [:index, :show, :create]
   resources :cart, only: [:create, :destroy]
   resources :charges, only: [:new, :create]
   resources :ads, only: [:new, :create]

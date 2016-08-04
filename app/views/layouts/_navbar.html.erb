@@ -9,7 +9,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "CAST-AWAY", root_path, class: "brand-name-home" %> </a>    </div>
+      <% cache('brand-logo') do %>
+      <%= link_to "CAST-AWAY", root_path, class: "brand-name-home" %> </a>   <% end %> </div>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
@@ -33,7 +34,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="brand brand-name-general navbar-left" href="/">CAST-AWAY</a>    </div>
+        <% cache('brand-logo-general') do %>
+        <a class="brand brand-name-general navbar-left" href="/">CAST-AWAY</a>   <% end %> </div>
         <ul class="nav navbar-nav navbar-right">
           <% if current_user %>
             <li><%= link_to "Cart (#{@cart.contents.count})", cart_path, class: "nav navbar-custom navbar-right" %></li>
