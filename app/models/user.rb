@@ -15,4 +15,8 @@ class User < ActiveRecord::Base
       new_user.location           = auth_info.extra.raw_info.location
     end
   end
+
+  def has_payment_info?
+    braintree_customer_id
+  end
 end

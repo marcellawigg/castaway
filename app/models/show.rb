@@ -2,6 +2,7 @@ class Show < ActiveRecord::Base
   include PgSearch
   pg_search_scope :search_for_shows, :against => [:title, :description, :id], :using => :tsearch
   validates_uniqueness_of :id
+  validates_uniqueness_of :title
   validates_presence_of :image_path
 
   def website

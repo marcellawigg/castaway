@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "/cart", to: "cart#show"
   resources :orders, only: [:index, :show, :create]
   resources :cart, only: [:create, :destroy, :update]
+  resources :charges, only: [:new, :create]
 
   resources :shows, only: [:show]
   resources :trending, only: [:index], as: :trending
