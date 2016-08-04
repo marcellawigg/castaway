@@ -14,7 +14,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
-        <li><%= link_to "Cart (#{@cart.total})", cart_path %></li>
+        <li><%= link_to "Cart", cart_path %></li>
           <li><%= link_to "Logout", logout_path, method: :delete %></li>
           <li><%= cl_image_tag(current_user.avatar, size: "35x35", crop: :fill) %> </li>
         <% else %>
