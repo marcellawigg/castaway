@@ -22,6 +22,7 @@ require "rails_helper"
     context "#trending" do
       it "returns ten trending subjects and podcasts about them" do
         VCR.use_cassette("trending") do
+          DynamicAudiosearchService.new.trending
       end
     end
   end

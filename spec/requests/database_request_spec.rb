@@ -22,6 +22,7 @@ require "rails_helper"
     context "#populate_database" do
       it "populates the database will all shows" do
         VCR.use_cassette("populate_database") do
+          DatabaseAudiosearchService.new.populate_database
       end
     end
   end
@@ -29,19 +30,20 @@ require "rails_helper"
   context "#image_paths(trend)" do
     it "returns image paths for a single trend" do
       VCR.use_cassette("image_paths(trend)") do
+        DatabaseAudiosearchService.new.search(query: "this american life")
       end
     end
   end
 
   context "#get_website(id)" do
-    it "returns website for a single website" do
+    xit "returns website for a single website" do
       VCR.use_cassette("get_website(id)") do
         end
       end
     end
 
   context "#get_related(id)" do
-    it "returns related items for a single show" do
+    xit "returns related items for a single show" do
       VCR.use_cassette("get_related(id)") do
       end
     end
