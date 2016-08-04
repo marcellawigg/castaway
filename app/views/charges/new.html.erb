@@ -1,0 +1,9 @@
+<div class="container">
+  <h2 class="mbs">New Charge</h2>
+  <%= form_tag charges_path do%>
+  <%= render 'customer_form' unless current_user.has_payment_info? %>
+    <p>Please enter your payment details:</p>
+    <div id="dropin"></div>
+    <%=submit_tag "Pay $#{@cart.total_price}", class: "button mt1" %>
+  <%end%>
+</div>

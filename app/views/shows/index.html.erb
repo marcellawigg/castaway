@@ -1,13 +1,11 @@
 <div class="container">
 
-  <% cache("results-index") do %>
 <h1><%= @results.count %> search results for "<%= params[:query] %>"</h1>
 <% @results.each do |show| %>
 <div class="grid">
   <div class="grid-sizer"></div>
   <div class="grid-item">
-    <%= cl_image_tag(show.image_path, width: '100%',height: '500', crop: :fill ) %>
+    <%=  link_to(cl_image_tag(show.image_path, width: '100%',height: '500', crop: :fill), show_path(show.id)) %>
   </div>
   <% end %>
 </div>
-<% end %> 
