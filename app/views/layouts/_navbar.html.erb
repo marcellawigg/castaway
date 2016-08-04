@@ -13,13 +13,14 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
-          <li class="custom-nav"> <%= "Logged in as  #{current_user.handle}" %> </li>
+          <li class="custom-nav"> Logged in as <%= current_user.handle %> </li>
           <li class="custom-nav"><%= link_to "Logout", logout_path, method: :delete %></li>
-          <li class="custom-nav"><%= "Cart (#{@cart.contents.count})" %></li>
+          <li class="custom-nav">Cart (<%= @cart.contents.count})%></li>
         <% else %>
           <li class="custom-nav"><%= link_to "Login", login_path %></li>
-          <li class="custom-nav"><%= "Cart (#{@cart.contents.count})" %></li>
+          <li class="custom-nav">Cart (<%= @cart.contents.count})%></li>
           <% end %>
+        </ul>
       </div>
     </nav>
     <% else %>
