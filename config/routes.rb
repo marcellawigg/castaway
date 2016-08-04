@@ -4,11 +4,12 @@ Rails.application.routes.draw do
   get "auth/twitter/callback", to: "sessions#create"
   delete '/logout', as: :logout, to: 'sessions#destroy'
   get '/shows/search', to: 'shows#index'
-  get "/cart", to: "cart#show"
+  get '/cart', to: 'cart#show'
+  patch '/cart', to: 'cart#update'
   resources :orders, only: [:index, :show, :create]
-  resources :cart, only: [:create, :destroy, :update]
+  resources :cart, only: [:create, :destroy]
   resources :charges, only: [:new, :create]
-
+  resources :ads, only: [:new, :create]
   resources :shows, only: [:show]
   resources :trending, only: [:index], as: :trending
 end

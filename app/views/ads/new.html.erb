@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="podcaster-form-group">
+<h3>Hello, beautiful podcaster! You claim your podcast, and once your email address is verified, you'll be able to put a price for ads for your podcast.</h3>
+  <%= form_tag ads_path do %>
+  <%= hidden_field_tag :show_id, params[:show_id] %>
+  <p><%= label_tag :name, "What is your name?" %>
+  <%= text_field_tag(:name) %></p>
+  <p><%= label_tag :email, "What is your email address associated with the podcast domain?" %>
+  <%= text_field_tag(:email) %></p>
+  <p>
+    <%= label_tag :podcast_ad_cost, "How much will you charge per one-minute ad on your show?" %>
+    <%= number_field_tag :podcast_ad_cost, nil, :step => 0.10 %>
+  </p>
+  <p>
+    <%= submit_tag "Verify me!", class: "btn checkout-button" %>
+  </p>
+  <% end %>
+</div>
+</div>
