@@ -58,11 +58,14 @@
 
 body {
   font-family: 'Lato';
+
 }
 
 body, html {
   color: black;
   background-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 .navbar-transparent {
@@ -149,47 +152,47 @@ body, html {
     display: none;
 }
 
-.carousel {
-  max-height: 700px;
-  width: 100%;
-  overflow: hidden !important;
-  background-size: cover;
-}
-.carousel-caption {
-   position: absolute;
-   top:400px
-}
+ .carousel {
+    max-height: 700px;
+    width: 100%;
+    overflow: hidden !important;
+    background-size: cover;
+ }
+ .carousel-caption {
+    position: absolute;
+    top:400px
+ }
 
-.carousel .item {
-  height: 100%;
-  width: 100%;
-}
+ .carousel .item {
+   height: 100%;
+   width: 100%;
+ }
 
 .carousel-inner > .item > img {
   text-align: center;
-  margin: 0 auto;
+   margin: 0 auto;
   -webkit-filter: brightness(50%); /* Chrome, Safari, Opera */
   filter: brightness(50%);
 }
 
 
-.carousel-inner > .item > img, .carousel-inner > .item > a > img {
-    display: block;
-    max-height: 100%;
-    line-height: 1;
-    width: 100%;
-    filter: brightness(90%);
-}
+ .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+     display: block;
+     max-height: 100%;
+     line-height: 1;
+     width: 100%;
+     filter: brightness(90%);
+ }
 
-.fill {
-    width: 100%;
-    height: auto;
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
+ .fill {
+     width: 100%;
+     height: auto;
+     background-position: center;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     background-size: cover;
+     -o-background-size: cover;
+ }
 
 div.form-group {
   position: absolute;
@@ -396,4 +399,10 @@ section + section {
 .grid-item img {
   display: block;
   max-width: 100%;
+}
+
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

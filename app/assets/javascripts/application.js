@@ -14,11 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-$(document).ready(function() {
-    $('.carousel').carousel({
-      interval: 2400
-    })
-  });
+
 
   $(function () {
   var w = $(window);
