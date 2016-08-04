@@ -12190,6 +12190,11 @@ var o,i,s,a,u;return i=null!=n?n:{},a=i.restorationIdentifier,s=i.restorationDat
   App.cable = ActionCable.createConsumer();
 
 }).call(this);
+$(document).ready(function() {
+    $('.carousel').carousel({
+      interval: 2000;
+    })
+  });
 (function() {
   $(function() {
     if (typeof gon !== 'undefined') {
@@ -12216,11 +12221,7 @@ var o,i,s,a,u;return i=null!=n?n:{},a=i.restorationIdentifier,s=i.restorationDat
 
 
 
-$(document).ready(function() {
-    $('.carousel').carousel({
-      interval: 2400
-    })
-  });
+
 
   $(function () {
   var w = $(window);

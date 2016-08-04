@@ -12190,6 +12190,22 @@ var o,i,s,a,u;return i=null!=n?n:{},a=i.restorationIdentifier,s=i.restorationDat
   App.cable = ActionCable.createConsumer();
 
 }).call(this);
+$(document).ready(function() {
+    $('.carousel').carousel({
+      interval: 2000;
+      pause: "false";
+    })
+  });
+(function() {
+  $(function() {
+    if (typeof gon !== 'undefined') {
+      return braintree.setup(gon.client_token, 'dropin', {
+        container: 'dropin'
+      });
+    }
+  });
+
+}).call(this);
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -12206,11 +12222,7 @@ var o,i,s,a,u;return i=null!=n?n:{},a=i.restorationIdentifier,s=i.restorationDat
 
 
 
-$(document).ready(function() {
-    $('.carousel').carousel({
-      interval: 2400
-    })
-  });
+
 
   $(function () {
   var w = $(window);

@@ -8856,13 +8856,15 @@ body {
   font-family: 'Lato';
 }
 
-/* line 63, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 64, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 body, html {
   color: black;
   background-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
-/* line 68, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 71, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .navbar-transparent {
   border-width: 0px;
   -webkit-box-shadow: 0px 0px;
@@ -8875,35 +8877,35 @@ body, html {
   background-image: linear-gradient(180deg, transparent 0%, transparent 100%);
 }
 
-/* line 80, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 83, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .navbar-custom {
   color: black;
   background-color: white;
 }
 
-/* line 85, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 88, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .navbar-nav > li {
   font-size: 14px;
   padding-left: 50px;
   padding-left: 10px;
 }
 
-/* line 91, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 94, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .navbar-custom .navbar-nav > .dropdown > a .caret {
   display: none;
 }
 
-/* line 95, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 98, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .navbar-custom .dropdown-toggle {
   color: black;
 }
 
-/* line 99, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 102, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .nav.navbar-custom.navbar-right li a {
   color: black;
 }
 
-/* line 103, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 106, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .navbar-transparent {
   border-width: 0px;
   -webkit-box-shadow: 0px 0px;
@@ -8916,53 +8918,53 @@ body, html {
   background-image: linear-gradient(180deg, transparent 0%, transparent 100%);
 }
 
-/* line 115, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 118, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .navbar-custom {
   color: black;
   background-color: white;
 }
 
-/* line 120, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 123, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .navbar-nav > li {
   font-size: 14px;
   padding-left: 50px;
   padding-left: 10px;
 }
 
-/* line 125, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 128, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .dropdown-menu {
   font-size: 14px;
 }
 
-/* line 129, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 132, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .dropdown-menu > li > a:hover {
   background-color: silver !important;
 }
 
-/* line 133, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 136, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .navbar-transparent a {
   color: white;
 }
 
-/* line 137, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 140, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .navbar-transparent .navbar-nav > li > a:hover, .navbar-transparent .navbar-nav > li > a:focus {
   background-color: white;
   opacity: 0.6;
   color: black;
 }
 
-/* line 143, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 146, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .navbar-nav > li {
   margin-left: 10px;
   margin-right: 10px;
 }
 
-/* line 148, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 151, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .navbar-transparent .navbar-nav > .dropdown > a .caret {
   display: none;
 }
 
-/* line 152, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 155, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .carousel {
   max-height: 700px;
   width: 100%;
@@ -8970,19 +8972,19 @@ body, html {
   background-size: cover;
 }
 
-/* line 158, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 161, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .carousel-caption {
   position: absolute;
   top: 400px;
 }
 
-/* line 163, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 166, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .carousel .item {
   height: 100%;
   width: 100%;
 }
 
-/* line 168, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 171, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .carousel-inner > .item > img {
   text-align: center;
   margin: 0 auto;
@@ -8991,7 +8993,7 @@ body, html {
   filter: brightness(50%);
 }
 
-/* line 176, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 179, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
   display: block;
   max-height: 100%;
@@ -9000,7 +9002,7 @@ body, html {
   filter: brightness(90%);
 }
 
-/* line 184, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 187, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .fill {
   width: 100%;
   height: auto;
@@ -9011,7 +9013,7 @@ body, html {
   -o-background-size: cover;
 }
 
-/* line 194, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 197, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 div.form-group {
   position: absolute;
   width: 100%;
@@ -9021,7 +9023,7 @@ div.form-group {
   z-index: 99;
 }
 
-/* line 202, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 205, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 div.form-group input {
   color: #999;
   font-weight: bold;
@@ -9031,7 +9033,7 @@ div.form-group input {
   border-radius: 2px;
 }
 
-/* line 211, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 214, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .company-logo {
   position: absolute;
   top: 50px;
@@ -9039,7 +9041,7 @@ div.form-group input {
   text-align: center;
 }
 
-/* line 218, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 221, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .home-button {
   padding: 18px 28px;
   font-size: 22px;
@@ -9055,7 +9057,7 @@ div.form-group input {
   margin-top: 100;
 }
 
-/* line 233, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 236, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .home-button:hover {
   background-color: white;
   opacity: 0.6;
@@ -9066,75 +9068,75 @@ div.form-group input {
   margin-top: 150;
 }
 
-/* line 243, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 246, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .navbar-custom {
   color: black;
   background-color: white;
 }
 
-/* line 248, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 251, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .carousel-indicators li {
   visibility: hidden;
 }
 
-/* line 250, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 253, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .navbar-nav > li {
   font-size: 14px;
   padding-left: 50px;
   padding-left: 10px;
 }
 
-/* line 255, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 258, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .dropdown-menu {
   font-size: 14px;
 }
 
-/* line 259, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 262, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .dropdown-menu > li > a:hover {
   background-color: silver !important;
 }
 
-/* line 263, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 266, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .navbar-transparent a {
   color: white;
 }
 
-/* line 267, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 270, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .navbar-transparent .navbar-nav > li > a:hover, .navbar-transparent .navbar-nav > li > a:focus {
   background-color: white;
   opacity: 0.6;
   color: black;
 }
 
-/* line 273, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 276, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .navbar-nav > li {
   margin-left: 10px;
   margin-right: 10px;
 }
 
-/* line 278, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 281, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .navbar-transparent .navbar-nav > .dropdown > a .caret {
   display: none;
 }
 
-/* line 282, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 285, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 section {
   height: 100%;
   overflow: hidden;
   position: relative;
 }
 
-/* line 288, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 291, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 section + section {
   background: #333;
 }
 
-/* line 292, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 295, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .d.visible {
   bottom: 20px;
 }
 
-/* line 296, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 299, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .d {
   border: 1px solid #eee;
   border-radius: 50%;
@@ -9158,7 +9160,7 @@ section + section {
   transition: bottom 1s ease;
 }
 
-/* line 323, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+/* line 326, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
 .a {
   border-right: 2px solid #eee;
   border-bottom: 2px solid #eee;
@@ -9225,4 +9227,41 @@ section + section {
   100% {
     border-color: #eee;
   }
+}
+/* line 377, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+.grid {
+  background: #DDD;
+}
+
+/* clear fix */
+/* line 382, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+/* line 390, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+
+/* line 395, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+.grid-item {
+  float: left;
+}
+
+/* line 399, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
+
+/* line 404, /Users/marcellawigg/turing/3module/projects/castaway/app/assets/stylesheets/custom.css.scss */
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
