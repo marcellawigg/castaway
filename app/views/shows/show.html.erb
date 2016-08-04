@@ -4,6 +4,7 @@
 
 <div class="checkout-group">
   <%= button_to "Add to Cart", root_path, method: :get, class: "btn checkout-button" %>
+<% cache('show_info') do %>
 <%= image_tag(@show.image_path, height: "200") %>
 <h1><%= @show.title %></h1>
 <p><%= @show.description %></p>
@@ -13,6 +14,7 @@
 
 
 <p><strong>Primary email contact</strong>: <%= @show.email %></p>
+<% end %>
 <% present @show do |show_presenter| %>
   <%= show_presenter.available %>
 </div>
