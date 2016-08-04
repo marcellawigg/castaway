@@ -4,9 +4,14 @@
 <h1><%= @results.count %> Top Trending Stories</h1>
 <% @results.each do |result| %>
   <h3><%= result.trend %></h3><br>
-  <% result.related_episodes.each do |episode| %>
-    <ul><li><strong><%= link_to episode.show_title, show_path(episode.show_id) %></strong>: <%= episode.title %></li></ul>
-  <% end %>
+  <% @service.image_paths(result).each do |image| %>
+    <div class="grid">
+      <div class="grid-sizer"></div>
+      <div class="grid-item">
+    <%= cl_image_tag(image, width: '100%',height: '500', crop: :fill) %>
+      </div>
+    <% end %>
+    </div>
 <% end %>
 </div>
 <% end %>

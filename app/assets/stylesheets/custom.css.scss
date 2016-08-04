@@ -14,6 +14,22 @@
   text-align: center;
 }
 
+#about-logo {
+  font-size: 140px;
+  font-family: 'Tommaso', sans-serif;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#about-text {
+  text-align: left;
+  font-size: 26px;
+  color: black;
+}
+
 .brand-name-home {
  font-family: 'Tommaso', sans-serif;
  font-size: 30px;
@@ -83,6 +99,10 @@ body, html {
 .navbar-custom {
   color: black;
   background-color:white;
+}
+
+#about {
+  height: 100%;
 }
 
 .navbar-nav > li {
@@ -406,3 +426,10 @@ section + section {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.wrapper {
+    min-height: 100%;
+    height: 1400px;
+}
+
+.content {padding-top: 700px;}
