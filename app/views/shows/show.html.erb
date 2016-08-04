@@ -1,10 +1,9 @@
-<!-- <#% cache_key_for(Show, "show") do %> -->
 <div class="container">
+  <div class="checkout-group">
 
+<%= button_to "Back to Home", root_path, method: :get, class: "checkout-button" %>
 
-<div class="checkout-group">
-<% cache('show_info') do %>
-<%= image_tag(@show.image_path, height: "200") %>
+<%= image_tag(@show.image_path) %>
 <h1><%= @show.title %></h1>
 <p><%= @show.description %></p>
 <p>
@@ -13,10 +12,8 @@
 
 
 <p><strong>Primary email contact</strong>: <%= @show.email %></p>
-<% end %>
 <% present @show do |show_presenter| %>
   <%= show_presenter.available %>
-</div>
 <% end %>
 </div>
-<!-- <#% end %> -->
+</div>
