@@ -4,6 +4,12 @@ class DynamicAudiosearchService < BaseAudiosearchService
     client.get_trending
   end
 
+  def image_paths(trend)
+      trend.related_episodes.map do |episode|
+        Show.where(title: episode.show_title).pluck(:image_path)
+      end.flatten
+    end
+
   def get_website(id)
     if client.get_show(id)["web_profiles"].present?
       if client.get_show(id)["web_profiles"]["personal"].present?
@@ -13,6 +19,7 @@ class DynamicAudiosearchService < BaseAudiosearchService
       end
     end
   end
+
 
   def get_related(id)
     client.get_related(id, {type: 'shows', size: 5, from: 5})
