@@ -10,25 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160804022100) do
+ActiveRecord::Schema.define(version: 20160804105500) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "order_items", force: :cascade do |t|
-    t.integer "show_id"
-    t.integer "order_id"
-    t.integer "quantity"
-    t.decimal "ad_price"
-    t.index ["order_id"], name: "index_order_items_on_order_id", using: :btree
-    t.index ["show_id"], name: "index_order_items_on_show_id", using: :btree
-  end
-
-  create_table "orders", force: :cascade do |t|
-    t.integer "user_id"
-    t.string  "status"
-    t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
-  end
 
   create_table "pg_search_documents", force: :cascade do |t|
     t.text     "content"

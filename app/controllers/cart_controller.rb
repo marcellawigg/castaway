@@ -21,7 +21,7 @@ class CartController < ApplicationController
   end
 
   def update
-    show = Show.find(params[:id])
+    show = Show.find(params[:format])
     @cart.update_quantity(show.id, params[:direction])
     redirect_to "/cart"
   end

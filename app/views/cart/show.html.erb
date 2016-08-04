@@ -1,23 +1,25 @@
 <div class="container">
+  <div class="checkout-group">
   <% @shows.each do |show| %>
   <div class="col-md-4 col-sm-6">
-      <%= image_tag show.image_path.url(:thumb) %>
+      <%= cl_image_tag show.image_path, size: '100x100' %>
       <h3><%= link_to show.title, show_path(show) %></h3>
       <p><%= show.price %>,
       Quantity: <%= @cart.count_of(show.id) %>
       <div class="quantity-button">
-        <%= button_to "-", cart_show_path(show, direction: "minus"), method: :patch, class: "btn btn-warning" %><%= button_to "+", cart_show_path(show, direction: "plus"), method: :patch, class: "btn btn-warning" %>
-        <%= button_to "Remove", cart_show_path(show), method: :delete, class: "btn btn-warning" %>
+        <%= button_to "-", cart_path(show, direction: "minus"), method: :patch, class: "btn checkout-button" %><%= button_to "+", cart_path(show, direction: "plus"), method: :patch, class: "btn checkout-button" %>
+        <%= button_to "Remove", cart_path(show), method: :delete, class: "btn checkout-button" %>
       </div>
     </div>
   <% end %>
 </div>
   <div id="total-cart-price">
     <h4>Total Items in Cart: <%= @cart.total %></h4>
-    <h4>Cart Total: <%= number_to_currency(@cart.total_price) %></h4>
+    <h4>Cart Total: <%= number_to_currency(@cart.total_price) || number_to_currency(0) %></h4>
     <div class="quantity-button">
       <%= checkout_option %>
-      <%= button_to "Keep Looking", root_path, method: :get, class: "btn btn-warning" %>
+      <%= button_to "Keep Looking", root_path, method: :get, class: "btn checkout-button" %>
+      </div>
     </div>
   </div>
 </div>
