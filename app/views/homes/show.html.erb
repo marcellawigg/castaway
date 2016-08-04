@@ -1,3 +1,4 @@
+<% cache('carousel') do %>
 <body style="margin:0; padding:0">
 <div id="home" class="carousel slide" data-ride="carousel">
 
@@ -25,6 +26,7 @@
         Cast-Away
       </div>
     </div>
+    <% end %>
     <div class="form-group col-lg-12 col-md-12 col-sm-12" >
           <%= button_to "What's Trending", trending_index_path, method: :get, class: 'home-button' %>
           <%= form_tag shows_search_path, method: :get do %>
@@ -35,6 +37,7 @@
               <div class="a"></div>
         </div></a>
       </div>
+      <% cache('about') do %>
       <div class="wrapper" id="about">
         <div class="container" id="about-logo">
           About Me
@@ -50,3 +53,4 @@
     <div class="content"><div class="body">
     </div></div>
 <!-- end wrapper --></div>
+  <% end %>
