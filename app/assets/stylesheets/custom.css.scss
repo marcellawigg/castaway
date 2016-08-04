@@ -125,6 +125,32 @@ body, html {
   color:white;
 }
 
+
+  .checkout-button {
+    padding: 10px 10px;
+    font-size: 16px;
+    color: black;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+         border-radius: 8px;
+     background: none;
+     border: 2px solid black;
+   }
+
+   .checkout-button:hover {
+    padding: 10px 10px;
+    font-size: 16px;
+    color: turquoise;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+      background: none;
+      opacity: 0.6;
+      border: 2px solid turquoise;
+    }
+
 .navbar-transparent .navbar-nav > li > a:hover, .navbar-transparent .navbar-nav > li > a:focus {
     color: turquoise;
 }
