@@ -23,7 +23,7 @@
       $(".d").removeClass("visible");
     }
 
-    // $(".d").addClass("visible");
+  //   $(".d").addClass("visible");
   // });
 
   // $(".d").addClass("visible");

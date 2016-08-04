@@ -7,7 +7,7 @@ class DynamicAudiosearchService < BaseAudiosearchService
   def image_paths(trend)
       trend.related_episodes.map do |episode|
         Show.where(title: episode.show_title).pluck(:image_path)
-      end.flatten
+      end.flatten.uniq
     end
 
   def get_website(id)
