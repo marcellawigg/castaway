@@ -14,12 +14,12 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
-        <li><%= link_to "Cart (#{@cart.contents.count})", cart_path %></li>
+        <li><%= link_to "Cart", cart_path %></li>
           <li><%= link_to "Logout", logout_path, method: :delete %></li>
           <li><%= cl_image_tag(current_user.avatar, size: "35x35", crop: :fill) %> </li>
         <% else %>
           <li><%= link_to "Login", login_path %></li>
-          <li><%= link_to "Cart (#{@cart.contents.count})", cart_path %></li>
+          <li><%= link_to "Cart", cart_path %></li>
           <% end %>
         </ul>
       </div>
@@ -38,11 +38,11 @@
         <a class="brand brand-name-general navbar-left" href="/">CAST-AWAY</a>   <% end %> </div>
         <ul class="nav navbar-nav navbar-right">
           <% if current_user %>
-            <li><%= link_to "Cart (#{@cart.contents.count})", cart_path, class: "nav navbar-custom navbar-right" %></li>
+            <li><%= link_to "Cart", cart_path, class: "nav navbar-custom navbar-right" %></li>
             <li><%= link_to "Logout", logout_path, method: :delete, class: "nav navbar-custom navbar-right" %></li>
             <li><%= cl_image_tag(current_user.avatar, size: "35x35", crop: :fill) %> </li></ul>
           <% else %>
-          <li class="navbar-custom"><%= link_to "Cart (#{@cart.contents.count})", cart_path %></li>
+          <li class="navbar-custom"><%= link_to "Cart", cart_path %></li>
             <li class="navbar-custom"><%= link_to "Login", login_path %></li>
             <% end %>
           </ul>
